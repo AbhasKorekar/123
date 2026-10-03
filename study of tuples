@@ -1,0 +1,230 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyO5jBwCQdAPJmzyoCf//jr1",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/AbhasKorekar/123/blob/main/study%20of%20tuples\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Tuples:Defining a Tuple"
+      ],
+      "metadata": {
+        "id": "_NpITEHHg4AE"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "A tuple looks just like a list, except you use parentheses\n",
+        "instead of square brackets. Once you define a tuple, you can\n",
+        "access individual elements by using each item’s index, just\n",
+        "as you would for a list."
+      ],
+      "metadata": {
+        "id": "JOEyQlDJhO3I"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dimensions=(200,50)\n",
+        "print(dimensions[0])\n",
+        "print(dimensions[1])\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OlhtT8WQhQk_",
+        "outputId": "4c5484dc-eb09-46dc-c274-346a82b1a3ef"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "200\n",
+            "50\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Looping Through All Values in a Tuple"
+      ],
+      "metadata": {
+        "id": "b_Y212Huh5yu"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dimensions=(200,50)\n",
+        "for deimension in dimensions:\n",
+        "  print(deimension)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7AM0DugHh6dw",
+        "outputId": "99e66a83-6e07-477e-e8ef-f816ad312d05"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "200\n",
+            "50\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Writing Over a Tuple"
+      ],
+      "metadata": {
+        "id": "kxXaAh4giG_u"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dimensions = (200, 50)\n",
+        "print(\"Original dimensions\")\n",
+        "for deimension in dimensions:\n",
+        "  print(deimension)\n",
+        "\n",
+        "dimensions=(200,50)\n",
+        "print(\"\\nModified dimensions\")\n",
+        "for deimension in dimensions:\n",
+        "  print(deimension)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gkbo92MyiJo3",
+        "outputId": "31df826e-1b49-46a3-d597-0018a8b385ba"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Original dimensions\n",
+            "200\n",
+            "50\n",
+            "\n",
+            "Modified dimensions\n",
+            "200\n",
+            "50\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3. Buffet: A buffet-style restaurant offers only five basic foods. Think of\n",
+        "five simple foods, and store them in a tuple.\n",
+        "Use a for loop to print each food the restaurant offers.\n",
+        "Try to modify one of the items, and make sure that Python rejects the\n",
+        "change.\n",
+        "The restaurant changes its menu, replacing two of the items with different\n",
+        "foods. Add a line that rewrites the tuple, and then use a for loop to print\n",
+        "each of the items on the revised menu."
+      ],
+      "metadata": {
+        "id": "cbKutxydizrU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "foods = ('pizza', 'burger', 'pasta', 'salad', 'ice cream')\n",
+        "\n",
+        "print(\"The restaurant offers:\")\n",
+        "for food in foods:\n",
+        "    print(food)\n",
+        "\n",
+        "# Try to change one item\n",
+        "foods[0] = 'sandwich'\n",
+        "\n",
+        "# The line above will cause an error because tuples cannot be changed.\n",
+        "\n",
+        "# The restaurant changes its menu\n",
+        "foods = ('pizza', 'sandwich', 'pasta', 'rice', 'cake')\n",
+        "\n",
+        "print(\"\\nThe restaurant's revised menu:\")\n",
+        "for food in foods:\n",
+        "    print(food)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 315
+        },
+        "id": "4LCDAGini0JE",
+        "outputId": "ccf105dd-1a10-4836-8f41-c15ea15b3b91"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The restaurant offers:\n",
+            "pizza\n",
+            "burger\n",
+            "pasta\n",
+            "salad\n",
+            "ice cream\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "'tuple' object does not support item assignment",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipykernel_3742/359163479.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      6\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      7\u001b[0m \u001b[0;31m# Try to change one item\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 8\u001b[0;31m \u001b[0mfoods\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m0\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m'sandwich'\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      9\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     10\u001b[0m \u001b[0;31m# The line above will cause an error because tuples cannot be changed.\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mTypeError\u001b[0m: 'tuple' object does not support item assignment"
+          ]
+        }
+      ]
+    }
+  ]
+}
