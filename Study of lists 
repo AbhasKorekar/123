@@ -1,0 +1,1329 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPgtZAMYAtd152fREgCOjFv",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/AbhasKorekar/123/blob/main/Study%20of%20lists%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lDZUuLlYpZYe",
+        "outputId": "67b115d3-1f70-4e91-91fa-5f7710a2911e"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['pen', 'pencil', 'scale']\n",
+            "PEN\n",
+            "scale\n"
+          ]
+        }
+      ],
+      "source": [
+        "list=[\"pen\",\"pencil\",\"scale\"]\n",
+        "print(list)\n",
+        "print(list[0].upper())\n",
+        "#to get last El of list (-1)\n",
+        "print(list[-1])"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "bicycles = ['trek', 'cannondale', 'redline', 'specialized']\n",
+        "print(f\"my first written word is {bicycles[0]}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "W5g2_SN7q8f1",
+        "outputId": "2309926f-3d9d-4914-a78c-0b7aebc04c92"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "my first written word is trek\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "names = [\"Rahul\", \"Amit\", \"Priya\", \"Sneha\"]\n",
+        "\n",
+        "print(names[0])\n",
+        "print(names[1])\n",
+        "print(names[2])\n",
+        "print(names[3])\n"
+      ],
+      "metadata": {
+        "id": "heI3KwOSrZ7Z"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Modifying, Adding, and Removing\n",
+        " Elements"
+      ],
+      "metadata": {
+        "id": "M3DrQTUvr35X"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "motorcycles = ['honda', 'yamaha', 'suzuki']\n",
+        "print(motorcycles)\n",
+        "motorcycles[1]=\"audi\"\n",
+        "print(motorcycles)\n",
+        "\n",
+        "motorcycles.append(\"abcx\")\n",
+        "print(motorcycles)\n",
+        "\n",
+        "motorcycles.insert(0,\"xbca\")\n",
+        "print(motorcycles)\n",
+        "\n",
+        "del motorcycles [2]\n",
+        "print(motorcycles)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-N9C7sYasEJ4",
+        "outputId": "57582eb2-abed-498d-9a2d-03001ba48de8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['honda', 'yamaha', 'suzuki']\n",
+            "['honda', 'audi', 'suzuki']\n",
+            "['honda', 'audi', 'suzuki', 'abcx']\n",
+            "['xbca', 'honda', 'audi', 'suzuki', 'abcx']\n",
+            "['xbca', 'honda', 'suzuki', 'abcx']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Removing an Item Using the pop() Method"
+      ],
+      "metadata": {
+        "id": "ZniROmWAvP2R"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "motorcycles = ['honda', 'yamaha', 'suzuki']\n",
+        "print(motorcycles)\n",
+        "popped_motorcycles=motorcycles.pop()\n",
+        "print(motorcycles)\n",
+        "print(popped_motorcycles)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lOOzsrGYvQgh",
+        "outputId": "b4ef3a49-2ac6-44fe-b25c-c81e586754aa"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['honda', 'yamaha', 'suzuki']\n",
+            "['honda', 'yamaha']\n",
+            "suzuki\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Removing an Item by Value"
+      ],
+      "metadata": {
+        "id": "QP0hzV8Bs6gT"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']\n",
+        "print(motorcycles)\n",
+        "motorcycles.remove('ducati')\n",
+        "print(motorcycles)"
+      ],
+      "metadata": {
+        "id": "naOkBJQss6ud"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Guest List: If you could invite anyone, living or deceased, to dinner,\n",
+        "who would you invite? Make a list that includes at least three people you’d\n",
+        "like to invite to dinner. Then use your list to print a message to each person,\n",
+        "inviting them to dinner"
+      ],
+      "metadata": {
+        "id": "o0wC3TZmtSAm"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "invite=[\"px\",\"pp\",\"pz\"]\n",
+        "print(f\"invitation for {invite[0]}\")\n",
+        "print(f\"invitation for {invite[1]}\")\n",
+        "print(f\"invitation for {invite[2]}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7MpkdDM6tS9d",
+        "outputId": "f841e508-4019-406b-dac4-3ef071152699"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "invitation for px\n",
+            "invitation for pp\n",
+            "invitation for pz\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "invite=[\"px\",\"pp\",\"pz\"]\n",
+        "print(f\"invitation for {invite[0]}\")\n",
+        "print(f\"invitation for {invite[1]}\")\n",
+        "print(f\"invitation for {invite[2]}\")\n",
+        "print(f\"unfortunately {invite[1]} cannot be with us.\")\n",
+        "invite[1]=\"ppp\"\n",
+        "\n",
+        "print(f\"invitation for {invite[0]}\")\n",
+        "print(f\"invitation for {invite[1]}\")\n",
+        "print(f\"invitation for {invite[2]}\")\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NqZWkMtDum-r",
+        "outputId": "0ef4c69c-023a-4cf5-98b2-64a883aa79b1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "invitation for px\n",
+            "invitation for pp\n",
+            "invitation for pz\n",
+            "unfortunately pp cannot be with us.\n",
+            "invitation for px\n",
+            "invitation for ppp\n",
+            "invitation for pz\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "invite=[\"px\",\"pp\",\"pz\"]\n",
+        "print(f\"invitation for {invite[0]}\")\n",
+        "print(f\"invitation for {invite[1]}\")\n",
+        "print(f\"invitation for {invite[2]}\")\n",
+        "invite.insert(0,\"po\")\n",
+        "invite.insert(2,\"pq\")\n",
+        "invite.append(\"qwe\")\n",
+        "print(invite)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hVKrhpUgvnvD",
+        "outputId": "5a593f96-e037-4385-d6c0-50b9a50c161f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "invitation for px\n",
+            "invitation for pp\n",
+            "invitation for pz\n",
+            "['po', 'px', 'pq', 'pp', 'pz', 'qwe']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "guest=['po', 'px', 'pq', 'pp', 'pz', 'qwe']\n",
+        "guest_pop=guest.pop()\n",
+        "print(f\"sorry cant invite {guest_pop}\")\n",
+        "guest_pop=guest.pop()\n",
+        "print(f\"sorry cant invite {guest_pop}\")\n",
+        "guest_pop=guest.pop()\n",
+        "print(f\"sorry cant invite {guest_pop}\")\n",
+        "guest_pop=guest.pop()\n",
+        "print(f\"sorry cant invite {guest_pop}\")\n",
+        "\n",
+        "print(f\"u are invited {guest[0]}\")\n",
+        "print(f\"u are invited {guest[1]}\")\n",
+        "\n",
+        "del guest[0]\n",
+        "del guest[0]\n",
+        "print(guest)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0B7sVizMxEEO",
+        "outputId": "7e34d0bb-a085-468d-ae03-ef1a1ee5c2b0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "sorry cant invite qwe\n",
+            "sorry cant invite pz\n",
+            "sorry cant invite pp\n",
+            "sorry cant invite pq\n",
+            "u are invited po\n",
+            "u are invited px\n",
+            "[]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Organizing a List"
+      ],
+      "metadata": {
+        "id": "hNyOnRpZKWGR"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Sorting a List Permanently with the sort()\n",
+        "Method"
+      ],
+      "metadata": {
+        "id": "FeYsUOsXKtIU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cars = ['bmw', 'audi', 'toyota', 'subaru']\n",
+        "cars.sort()\n",
+        "print(cars)\n",
+        "cars.sort(reverse=True)\n",
+        "print(cars)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "q--D0lBRKt57",
+        "outputId": "a44d1494-3748-4d36-adc5-59efb426f2d0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['audi', 'bmw', 'subaru', 'toyota']\n",
+            "['toyota', 'subaru', 'bmw', 'audi']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cars = ['bmw', 'audi', 'toyota', 'subaru']\n",
+        "print(\"Here is the original list:\")\n",
+        "print(cars)\n",
+        "cars = ['bmw', 'audi', 'toyota', 'subaru']\n",
+        "print(\" \\nHere is the original list:\")\n",
+        "print(sorted(cars))\n",
+        "print(\"\\nHere is the original list again:\")\n",
+        "print(cars)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oEYjfZpPLePd",
+        "outputId": "f3cc7bc8-77e6-4fb3-90ef-da5f650a3a88"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Here is the original list:\n",
+            "['bmw', 'audi', 'toyota', 'subaru']\n",
+            " \n",
+            "Here is the original list:\n",
+            "['audi', 'bmw', 'subaru', 'toyota']\n",
+            "\n",
+            "Here is the original list again:\n",
+            "['bmw', 'audi', 'toyota', 'subaru']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Printing a List in Reverse Order"
+      ],
+      "metadata": {
+        "id": "UuXYub9iL-pS"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cars = ['bmw', 'audi', 'toyota', 'subaru']\n",
+        "cars.reverse()\n",
+        "print(cars)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-bl71kClL_Jq",
+        "outputId": "660cd322-33c7-4354-eda6-9056893c698b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['subaru', 'toyota', 'audi', 'bmw']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Finding the Length of a List"
+      ],
+      "metadata": {
+        "id": "CI5QVXqrMLk6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cars = ['bmw', 'audi', 'toyota', 'subaru']\n",
+        "print(len(cars))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "an1fQOSEMMGr",
+        "outputId": "e9b224b6-4ec5-4e44-c46d-af01836baaff"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "places = [\"Japan\", \"Switzerland\", \"New Zealand\", \"Italy\", \"Iceland\"]\n",
+        "print(places)\n",
+        "print(sorted(places))\n",
+        "print(places)\n",
+        "print(sorted(places,reverse=True))\n",
+        "print(places)\n",
+        "places.reverse()\n",
+        "print(places)\n",
+        "places.reverse()\n",
+        "print(places)\n",
+        "places.sort()\n",
+        "print(places)\n",
+        "places.sort(reverse=True)\n",
+        "print(places)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JyM21LNWMgLo",
+        "outputId": "a7607090-fe9b-4c08-b473-1085f1e3f311"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Japan', 'Switzerland', 'New Zealand', 'Italy', 'Iceland']\n",
+            "['Iceland', 'Italy', 'Japan', 'New Zealand', 'Switzerland']\n",
+            "['Japan', 'Switzerland', 'New Zealand', 'Italy', 'Iceland']\n",
+            "['Switzerland', 'New Zealand', 'Japan', 'Italy', 'Iceland']\n",
+            "['Japan', 'Switzerland', 'New Zealand', 'Italy', 'Iceland']\n",
+            "['Iceland', 'Italy', 'New Zealand', 'Switzerland', 'Japan']\n",
+            "['Japan', 'Switzerland', 'New Zealand', 'Italy', 'Iceland']\n",
+            "['Iceland', 'Italy', 'Japan', 'New Zealand', 'Switzerland']\n",
+            "['Switzerland', 'New Zealand', 'Japan', 'Italy', 'Iceland']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "guests = [\"Albert Einstein\", \"Marie Curie\", \"Nikola Tesla\"]\n",
+        "print(f\"Totally {len(guests)} people are invited.\")\n",
+        "#to print last guests\n",
+        "print(guests[-1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BMaDcQfoN3mW",
+        "outputId": "8235a779-16af-4f88-9072-3fc188a4437e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Totally 3 people are invited.\n",
+            "Nikola Tesla\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "WORKING WITH LISTS"
+      ],
+      "metadata": {
+        "id": "TeLFHMmuHI-4"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "magicians = ['alice', 'david', 'carolina']\n",
+        "for el in magicians:\n",
+        "    print(f\"That was a great Trick by {el.title()}\\n\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uxDUA755Hzc9",
+        "outputId": "380e0a9d-d022-466e-94eb-11b7a1b79075"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "That was a great Trick by Alice\n",
+            "\n",
+            "That was a great Trick by David\n",
+            "\n",
+            "That was a great Trick by Carolina\n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "pizzas = [\"pepperoni\", \"margherita\", \"cheese\"]\n",
+        "for pizza in pizzas:\n",
+        "  print(f\"I love {pizza.title()} in dinner\")\n",
+        "print(\"\\nI do really love pizzas \")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-nGleyedI9Aj",
+        "outputId": "0b9dc0cf-215c-4963-ea3f-6654b4b2ebcc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "I love Pepperoni in dinner\n",
+            "I love Margherita in dinner\n",
+            "I love Cheese in dinner\n",
+            "\n",
+            "I do really love pizzas \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "animals = [\"dog\", \"cat\", \"rabbit\"]\n",
+        "for el in animals:\n",
+        "  print(f\" A {el.title()} will be a Great pet!\")\n",
+        "print(\"\\nThese all are great Pets\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "x1FpxinLJfub",
+        "outputId": "04e2cb83-576f-434a-fa4d-f86ae660d517"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " A Dog will be a Great pet!\n",
+            " A Cat will be a Great pet!\n",
+            " A Rabbit will be a Great pet!\n",
+            "\n",
+            "These all are great Pets\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Making Numerical Lists  Using the range() Function"
+      ],
+      "metadata": {
+        "id": "Leg7-OXrKA8x"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for val in range (1,5):\n",
+        "  print (val)\n",
+        "\n",
+        "num=list(range(1,6))\n",
+        "print(num)\n"
+      ],
+      "metadata": {
+        "id": "XsiirvIMKHMi",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "fa0ab9e2-9b1b-4658-a88c-d22992d21aa0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "[1, 2, 3, 4, 5]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for i in range(2,11,2):\n",
+        "  print(i)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "enoLUs1cYPi7",
+        "outputId": "36624724-1d5e-484f-a8c4-140f86ef30f8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "4\n",
+            "6\n",
+            "8\n",
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "evennum=list(range(2,11,2))\n",
+        "print(evennum)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "e_ezruYyYz7n",
+        "outputId": "101aaaee-73a6-4c47-bc85-c2b947245a38"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[2, 4, 6, 8, 10]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Here’s how you might\n",
+        "put the first 10 square numbers into a list:"
+      ],
+      "metadata": {
+        "id": "ZoBeUUKmZdvC"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "squares=[]\n",
+        "for i in range(1,11):\n",
+        "  square=i**2\n",
+        "  squares.append(square)\n",
+        "print(squares)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oAu6y1swZfLe",
+        "outputId": "99411a17-171c-419e-9840-d47b9779a90a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "similarly"
+      ],
+      "metadata": {
+        "id": "fLjwtfTEaGfd"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "squares=[]\n",
+        "for i in range(1,11):\n",
+        "  squares.append(i**2)\n",
+        "print(squares)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "iJMtv0IJaKQd",
+        "outputId": "8cf0db3b-cc65-4494-f40f-537b74d43c4c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "List Comprehensions\n",
+        " A list\n",
+        "comprehension allows you to generate this same list in just\n",
+        "one line of code."
+      ],
+      "metadata": {
+        "id": "8HV1MtbUaw1r"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "squares=[i**2 for i in range(1,11)]\n",
+        "print(squares)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "26_hSv3CatKj",
+        "outputId": "598714fc-a936-4bce-c722-ac4f39a09f40"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Counting to Twenty: Use a for loop to print the numbers from 1 to\n",
+        "20, inclusive."
+      ],
+      "metadata": {
+        "id": "JOOvWvhDcB26"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num=list(range(1,21))\n",
+        "print(num)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DqnOlDbbcDoD",
+        "outputId": "728ba6c8-eaaa-48f6-e6fc-6749a450a752"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Odd Numbers: Use the third argument of the range() function to make\n",
+        "a list of the odd numbers from 1 to 20. Use a for loop to print each number."
+      ],
+      "metadata": {
+        "id": "pdzulfTIccRq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num=[]\n",
+        "for i in range(1,21,2):\n",
+        "  num.append(i)\n",
+        "print(num)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "G5lGGdskcfa6",
+        "outputId": "27d85b77-b1bf-4928-f7e5-07a8902bda7a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 3, 5, 7, 9, 11, 13, 15, 17, 19]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7. Threes: Make a list of the multiples of 3, from 3 to 30. Use a for loop to\n",
+        "print the numbers in your list.\n"
+      ],
+      "metadata": {
+        "id": "leaeWDMCEXwT"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num=[]\n",
+        "for i in range(3,31,3):\n",
+        "  num.append(i)\n",
+        "print(num)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yhFT56pKEYgl",
+        "outputId": "55043092-b5ea-4233-bdca-4172123bad40"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[3, 6, 9, 12, 15, 18, 21, 24, 27, 30]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        " Cubes: A number raised to the third power is called a cube. For\n",
+        "example, the cube of 2 is written as 2**3 in Python. Make a list of the first 10\n",
+        "cubes (that is, the cube of each integer from 1 through 10), and use a for\n",
+        "loop to print out the value of each cube."
+      ],
+      "metadata": {
+        "id": "92d1WGqgEyas"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num=[]\n",
+        "for i in range(1,11):\n",
+        "  num.append(i**3)\n",
+        "print(num)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "o3nJl3tiEy9e",
+        "outputId": "09bfbef1-7cb1-4e5f-887f-fb455e1f0c8b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Cube Comprehension: Use a list comprehension to generate a list of\n",
+        "the first 10 cubes.\n"
+      ],
+      "metadata": {
+        "id": "1P4qUuGZFJ81"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num=[i**3 for i in range(1,11)]\n",
+        "print(num)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "E_b-MqA6FLJM",
+        "outputId": "d4adb767-2cb5-45c3-9c3d-11bfdd4037f7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Working with Part of a List\n",
+        "Slicing a List"
+      ],
+      "metadata": {
+        "id": "LiohiuT-FcBD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "players = ['charles', 'martina', 'michael', 'florence', 'eli']\n",
+        "print(players[0:2])\n",
+        "print(players[-3:])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "V_R9nNNpFf_k",
+        "outputId": "528d4f16-14e7-485b-a420-d69c6f96deaf"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['charles', 'martina']\n",
+            "['michael', 'florence', 'eli']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Looping Through a Slice"
+      ],
+      "metadata": {
+        "id": "vL7B0OHKGhXh"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "players = ['charles', 'martina', 'michael', 'florence', 'eli']\n",
+        "print(\"Hrese top 3 of my team\")\n",
+        "for player in players[0:3]:\n",
+        "  print(player.title())\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "R8v2ciYjGiH7",
+        "outputId": "f27ccecd-caa4-4e63-c919-775b20ab5709"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hrese top 3 of my team\n",
+            "Charles\n",
+            "Martina\n",
+            "Michael\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Copying a List"
+      ],
+      "metadata": {
+        "id": "l1da2ishHTpw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_foods = ['pizza', 'falafel', 'carrot cake']\n",
+        "friend_foods=my_foods[:]\n",
+        "print(\"My favorite foods are:\")\n",
+        "print(my_foods)\n",
+        "print(\"\\nMy friend's favorite foods are:\")\n",
+        "print(friend_foods)\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KKIhlAjpHfoq",
+        "outputId": "d77bca12-3e0f-4c28-f998-7f319bf8793a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "My favorite foods are:\n",
+            "['pizza', 'falafel', 'carrot cake']\n",
+            "\n",
+            "My friend's favorite foods are:\n",
+            "['pizza', 'falafel', 'carrot cake']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "-10. Slices: Using one of the programs you wrote in this chapter, add\n",
+        "several lines to the end of the program that do the following:\n",
+        "Print the message The first three items in the list are:. Then use a slice to\n",
+        "print the first three items from that program’s list.\n",
+        "Print the message Three items from the middle of the list are:. Then use a\n",
+        "slice to print three items from the middle of the list.\n",
+        "Print the message The last three items in the list are:. Then use a slice to\n",
+        "print the last three items in the list."
+      ],
+      "metadata": {
+        "id": "0GlCVpq8caVY"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "foods = ['pizza', 'burger', 'pasta', 'sandwich', 'biryani', 'noodles', 'tacos']\n",
+        "print(foods[0:3])\n",
+        "print(\"Three items from the middle of the list are \")\n",
+        "middle=len(foods)//2\n",
+        "print(foods[middle-1:middle+2])\n",
+        "print(\"Last 3 of lsit are:\")\n",
+        "print(foods[-3:])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KnY9xPyfca3H",
+        "outputId": "c3c0d4e3-3d46-437e-d995-5ceab32400f2"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['pizza', 'burger', 'pasta']\n",
+            "Three items from the middle of the list are \n",
+            "['pasta', 'sandwich', 'biryani']\n",
+            "Last 3 of lsit are:\n",
+            "['biryani', 'noodles', 'tacos']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4-11. My Pizzas, Your Pizzas: Start with your program from Exercise 4-1\n",
+        "(page 56). Make a copy of the list of pizzas, and call it friend_pizzas. Then, do\n",
+        "the following:\n",
+        "Add a new pizza to the original list.\n",
+        "Add a different pizza to the list friend_pizzas.\n",
+        "Prove that you have two separate lists. Print the message My favorite pizzas\n",
+        "are:, and then use a for loop to print the first list. Print the message My\n",
+        "friend’s favorite pizzas are:, and then use a for loop to print the second list.\n",
+        "Make sure each new pizza is stored in the appropriate list."
+      ],
+      "metadata": {
+        "id": "KhvPRRA-eJd0"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "pizzas = ['pepperoni', 'cheese', 'chicken']\n",
+        "freind_pizzas=pizzas[:]\n",
+        "pizzas.append('mushroom')\n",
+        "freind_pizzas.append('vegetable')\n",
+        "print(pizzas)\n",
+        "print(freind_pizzas)\n",
+        "\n",
+        "print(\"\\nMy best pizzas are:\")\n",
+        "for n in pizzas:\n",
+        "  print(n)\n",
+        "\n",
+        "print(\"\\nMy frnds fav pizzas are:\")\n",
+        "for m in freind_pizzas:\n",
+        "  print(m)\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pSLNXSVxeLZI",
+        "outputId": "5eb19165-1f0d-43bd-f685-1bb44c682589"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['pepperoni', 'cheese', 'chicken', 'mushroom']\n",
+            "['pepperoni', 'cheese', 'chicken', 'vegetable']\n",
+            "\n",
+            "My best pizzas are:\n",
+            "pepperoni\n",
+            "cheese\n",
+            "chicken\n",
+            "mushroom\n",
+            "\n",
+            "My frnds fav pizzas are:\n",
+            "pepperoni\n",
+            "cheese\n",
+            "chicken\n",
+            "vegetable\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        ". More Loops: All versions of foods.py in this section have avoided\n",
+        "using for loops when printing, to save space. Choose a version of foods.py,\n",
+        "and write two for loops to print each list of foods.\n"
+      ],
+      "metadata": {
+        "id": "-6a-vi4Mf4kw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "foods = ['pizza', 'falafel', 'carrot cake']\n",
+        "\n",
+        "favorite_foods = ['pizza', 'falafel', 'ice cream']\n",
+        "\n",
+        "print(\"My favorite foods are:\")\n",
+        "for food in foods:\n",
+        "    print(food)\n",
+        "\n",
+        "print(\"\\nMy friend's favorite foods are:\")\n",
+        "for food in favorite_foods:\n",
+        "    print(food)\n"
+      ],
+      "metadata": {
+        "id": "j-il93DPf8v9"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
